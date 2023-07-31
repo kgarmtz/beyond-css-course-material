@@ -43,12 +43,45 @@ section {
   padding: 1em 2em;
   cursor: pointer;
   border: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  // your code here
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  
+  .surface-primary &, 
+  .surface-secondary & {
+    background: white;
+    color:
+     black;
+  }
+  
+  .surface-accent & {
+    color: white;
+    background: black;
+  }
+
+  // Hover and focus must go last so they get priority over the other rules
+  // Going last allows this element to inherit the styles from its parent.
+  &:hover,
+  &:focus {
+    background: inherit;
+    color: inherit;
+    outline: currentColor 2px solid;
+  }
 }
 
 .text-subdued {
   font-size: 1rem;
-  // your code here
+
+  .surface-primary & {
+    opacity: 0.8;
+  }
+
+  .surface-secondary & {
+    opacity: 0.7;
+  }
+
+  .surface-accent & {
+    opacity: 0.6;
+  }
 }

@@ -15,7 +15,42 @@ body {
 }
 
 .btn {
-  /* your code starts here */
+  // Default reset for a button
+  display: inline-block;
+  padding: 1em 2em;
+  cursor: pointer;
+  border: 0;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  color: white;
 
-  /* your code ends here */
+  &__primary {
+    background: $clr-primary-400;
+
+    &:hover, 
+    &:focus {
+      background: $clr-primary-500;
+    }
+  }
+
+  &__secondary {
+    background: $clr-secondary-400;
+
+    &:hover, 
+    &:focus {
+      background: $clr-secondary-500;
+    }
+  }
+
+  &__accent {
+    background: $clr-accent-400;
+    color: black;
+
+    &:hover, 
+    :focus {
+      background: $clr-accent-500;
+    }
+  }
 }
